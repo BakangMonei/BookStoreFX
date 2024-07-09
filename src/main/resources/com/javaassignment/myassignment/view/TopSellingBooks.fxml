@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox spacing="10" maxHeight="360.0" maxWidth="510.0" minHeight="360.0" minWidth="510.0" prefHeight="360.0" prefWidth="510.0"
+      alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaassignment.myassignment.controller.TopSellingBooksController">
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Top Selling Books" textAlignment="CENTER">
+        <font>
+            <Font name="Monaco" size="30.0" />
+        </font>
+    </Text>
+    <Label text="Top 10 selling books" />
+    <ListView fx:id="topSellingBooksListView" />
+</VBox>

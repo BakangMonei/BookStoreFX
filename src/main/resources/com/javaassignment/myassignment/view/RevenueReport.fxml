@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="250.0" maxWidth="510.0" minHeight="250.0" minWidth="510.0" prefHeight="250.0" prefWidth="510.0" spacing="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.javaassignment.myassignment.controller.RevenueReportController">
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Revenue Report" textAlignment="CENTER">
+        <font>
+            <Font name="Monaco" size="30.0" />
+        </font>
+    </Text>
+    <Label fx:id="lblTotalRevenue" text="Total Revenue: $" />
+</VBox>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox spacing="10" maxHeight="320.0" maxWidth="510.0" minHeight="320.0" minWidth="510.0" prefHeight="320.0" prefWidth="510.0" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaassignment.myassignment.controller.SearchBookController">
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search Books" textAlignment="CENTER">
+        <font>
+            <Font name="Monaco" size="30.0" />
+        </font>
+    </Text>
+    <Label text="Search by title, author, or genre" />
+    <TextField fx:id="txtSearch" />
+    <Button text="Search" onAction="#searchBooks" />
+    <ListView fx:id="searchResultsListView" />
+</VBox>

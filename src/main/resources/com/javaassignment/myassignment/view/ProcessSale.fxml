@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="250.0" maxWidth="510.0" minHeight="250.0" minWidth="510.0" prefHeight="250.0" prefWidth="510.0" spacing="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaassignment.myassignment.controller.ProcessSaleController">
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Process Sale" textAlignment="CENTER">
+        <font>
+            <Font name="Monaco" size="30.0" />
+        </font>
+    </Text>
+    <GridPane hgap="10" vgap="10">
+        <Label text="ISBN" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="txtISBN" maxHeight="30.0" maxWidth="450.0" minHeight="30.0" minWidth="450.0" prefHeight="30.0" prefWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label text="Quantity" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="txtQuantity" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+    <Button onAction="#processSale" text="Process Sale" />
+</VBox>

@@ -2,7 +2,6 @@ package com.javaassignment.myassignment.controller;
 
 import com.javaassignment.myassignment.model.Book;
 import com.javaassignment.myassignment.util.FileUtil;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
@@ -39,5 +38,5 @@ public class ManageInventoryController {
         quantityColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         inventoryTableView.setItems(books);
     }
-    
+
 }

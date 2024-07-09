@@ -15,6 +15,9 @@ public class Customer implements Serializable {
     public Customer(String id, String name, String address, String phone, String email) {
         this.id = id;
         this.name = name;
+        this.address = address;
+        this.phone = phone;
+        this.email = email;
         this.purchaseHistory = new ArrayList<>();
     }
 

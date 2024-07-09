@@ -24,7 +24,8 @@ public class BookstoreManagementSystemController {
     @FXML
     private MenuItem btnRevenueReport;
     @FXML
-    private MenuItem btnTopSellingBooks;
+    private MenuItem btnTopSellingBooks, btnViewCustomers;
+
 
     @FXML
     private void initialize() {
@@ -35,6 +36,7 @@ public class BookstoreManagementSystemController {
         btnCustomerManagement.setOnAction(event -> openView("/com/javaassignment/myassignment/view/CustomerManagement.fxml", "Customer Management"));
         btnRevenueReport.setOnAction(event -> openView("/com/javaassignment/myassignment/view/RevenueReport.fxml", "Revenue Report"));
         btnTopSellingBooks.setOnAction(event -> openView("/com/javaassignment/myassignment/view/TopSellingBooks.fxml", "Top Selling Books"));
+        btnViewCustomers.setOnAction(event -> openView("/com/javaassignment/myassignment/view/ViewCustomers.fxml", "View All Customers"));
     }
 
     private void openView(String fxmlPath, String title) {

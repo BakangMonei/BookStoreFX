@@ -3,6 +3,7 @@ package com.javaassignment.myassignment.controller;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 
@@ -24,8 +25,18 @@ public class BookstoreManagementSystemController {
     @FXML
     private MenuItem btnRevenueReport;
     @FXML
-    private MenuItem btnTopSellingBooks, btnViewCustomers;
+    private MenuItem btnTopSellingBooks;
+    @FXML
+    private MenuItem btnViewCustomers;
+    @FXML
+    private MenuItem btnAnalyticalCharts;
 
+    @FXML
+    private Button btnRevenueReportCenter;
+    @FXML
+    private Button btnTopSellingBooksCenter;
+    @FXML
+    private Button btnAnalyticalChartsCenter;
 
     @FXML
     private void initialize() {
@@ -37,6 +48,11 @@ public class BookstoreManagementSystemController {
         btnRevenueReport.setOnAction(event -> openView("/com/javaassignment/myassignment/view/RevenueReport.fxml", "Revenue Report"));
         btnTopSellingBooks.setOnAction(event -> openView("/com/javaassignment/myassignment/view/TopSellingBooks.fxml", "Top Selling Books"));
         btnViewCustomers.setOnAction(event -> openView("/com/javaassignment/myassignment/view/ViewCustomers.fxml", "View All Customers"));
+        btnAnalyticalCharts.setOnAction(event -> openView("/com/javaassignment/myassignment/view/AnalyticalCharts.fxml", "Analytical Charts"));
+
+        btnRevenueReportCenter.setOnAction(event -> openView("/com/javaassignment/myassignment/view/RevenueReport.fxml", "Revenue Report"));
+        btnTopSellingBooksCenter.setOnAction(event -> openView("/com/javaassignment/myassignment/view/TopSellingBooks.fxml", "Top Selling Books"));
+        btnAnalyticalChartsCenter.setOnAction(event -> openView("/com/javaassignment/myassignment/view/AnalyticalCharts.fxml", "Analytical Charts"));
     }
 
     private void openView(String fxmlPath, String title) {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.javaassignment.myassignment.controller.AnalyticalChartsController"
+            prefHeight="400.0" prefWidth="600.0">
+    <BarChart fx:id="salesBarChart" layoutX="14.0" layoutY="14.0" prefHeight="372.0" prefWidth="572.0">
+        <xAxis>
+            <CategoryAxis fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis fx:id="yAxis" />
+        </yAxis>
+    </BarChart>
+</AnchorPane>

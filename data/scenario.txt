@@ -20,7 +20,7 @@ i. Plan,design,and create a user-friendly GUI for the BookstoreManagement System
 b. System Features [50 marks]
 i. A menu to select operations, including adding new books, managing inventory, and processing sales. [DONE]
 ii. Ability to add new books to the inventory with details such as ISBN, title, author, genre, price, and quantity. [DONE]
-iii. Ability to display the entire book inventory with relevant details.
+iii. Ability to display the entire book inventory with relevant details. [DONE]
 iv. Implement a search functionality allowing users to find books based on author, genre, or title. [DONE]
 v. Provide a feature to process book sales, updating inventory and generating sales reports. [DONE]
 vi. Implement a customer management system with the ability to add new customers and view their purchase history.

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaassignment.myassignment.controller.ManageInventoryController">
+<VBox alignment="CENTER" maxWidth="750.0" minWidth="750.0" prefWidth="750.0" spacing="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.javaassignment.myassignment.controller.ManageInventoryController">
     <TableView fx:id="inventoryTableView">
         <columns>
             <TableColumn fx:id="isbnColumn" text="ISBN" />

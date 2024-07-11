@@ -21,7 +21,15 @@
             <Menu text="Reports">
                 <MenuItem text="Revenue Report" fx:id="btnRevenueReport" />
                 <MenuItem text="Top Selling Books" fx:id="btnTopSellingBooks" />
+                <MenuItem text="Analytical Charts" fx:id="btnAnalyticalCharts" />
             </Menu>
         </MenuBar>
     </top>
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+            <Button text="View Revenue Report" fx:id="btnRevenueReportCenter" />
+            <Button text="View Top Selling Books" fx:id="btnTopSellingBooksCenter" />
+            <Button text="View Analytical Charts" fx:id="btnAnalyticalChartsCenter" />
+        </VBox>
+    </center>
 </BorderPane>

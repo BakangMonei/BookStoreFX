@@ -1,6 +1,7 @@
 ISBN1,Programming With Java,Tebatso Nage,Computer Science,300.0,1500
-ISBN2,Programming With TypeScript,Kentsenao Baseki,Computer Science,500.0,694
+ISBN2,Programming With TypeScript,Kentsenao Baseki,Computer Science,500.0,691
 ISBN3,AWS,Sylvester Mokgwe,Cloud Services,300.0,1500
 ISBN4,CCNA1,Karabo Macheng,Networking,500.0,400
 ISBN5,CSIM,Tebatso Nage,Hardware Components,300.0,445
 ISBN6,Mobile Development,Freedmore Sidume,Computer Science,800.0,200
+ISBN10,Flutter For Beginners,Precious The Flutter Geek,Programming,250.0,5000

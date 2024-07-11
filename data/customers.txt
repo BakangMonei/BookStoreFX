@@ -2,3 +2,5 @@
 1274,Cassey Amogelang,Tlokweng,1234567,cassey@gmail.com
 2763,Junior Precious,Gaborone,12346,myEmail@mail.com
 9876,Pumpy,Tlokweng,98765431,pumpy@mail.com
+987654,New Buyer,Botswana Accountancy College,7654321,newbuyer@mail.com
+9812,Sylvester Mokgwe,Fairgrounds,876541,sylvester@bac.ac.bw

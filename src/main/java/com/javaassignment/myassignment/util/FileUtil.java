@@ -5,15 +5,18 @@ import com.javaassignment.myassignment.model.Customer;
 import com.javaassignment.myassignment.model.Sale;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FileUtil {
-    private static final String BOOKS_FILE = "data/books.txt";
-    private static final String CUSTOMERS_FILE = "data/customers.txt";
-    private static final String SALES_FILE = "data/sales.txt";
+    public static final String BOOKS_FILE = "data/books.txt";
+    public static final String CUSTOMERS_FILE = "data/customers.txt";
+    public static final String SALES_FILE = "data/sales.txt";
 
     // -----------------------------------------------------------------------------------------------------------------
     public static List<Book> readBooks() {
@@ -35,7 +38,7 @@ public class FileUtil {
         ObservableList<Book> books = FXCollections.observableArrayList();
         try (BufferedReader reader = new BufferedReader(new FileReader(BOOKS_FILE))) {
             String line;
-            while ((line = reader.readLine())!= null) {
+            while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 Book book = new Book(parts[0], parts[1], parts[2], parts[3], Double.parseDouble(parts[4]), Integer.parseInt(parts[5]));
                 books.add(book);
@@ -46,7 +49,46 @@ public class FileUtil {
         return books;
     }
 
+    public static void readToTable(TableView<Book> tableView) {
+        ObservableList<Book> books = FXCollections.observableArrayList();
+        try (BufferedReader reader = new BufferedReader(new FileReader(BOOKS_FILE))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                Book book = new Book(parts[0], parts[1], parts[2], parts[3], Double.parseDouble(parts[4]), Integer.parseInt(parts[5]));
+                books.add(book);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
+        // Ensure the table columns are set correctly
+        for (TableColumn<Book, ?> column : tableView.getColumns()) {
+            String columnName = column.getText();
+            switch (columnName) {
+                case "ISBN":
+                    column.setCellValueFactory(new PropertyValueFactory<>("isbn"));
+                    break;
+                case "Title":
+                    column.setCellValueFactory(new PropertyValueFactory<>("title"));
+                    break;
+                case "Author":
+                    column.setCellValueFactory(new PropertyValueFactory<>("author"));
+                    break;
+                case "Genre":
+                    column.setCellValueFactory(new PropertyValueFactory<>("genre"));
+                    break;
+                case "Price":
+                    column.setCellValueFactory(new PropertyValueFactory<>("price"));
+                    break;
+                case "Quantity":
+                    column.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+                    break;
+            }
+        }
+
+        tableView.setItems(books);
+    }
 
     public static void writeBooks(List<Book> books) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(BOOKS_FILE))) {
@@ -58,9 +100,6 @@ public class FileUtil {
             e.printStackTrace();
         }
     }
-
-
-
     // -----------------------------------------------------------------------------------------------------------------
 
     // -----------------------------------------------------------------------------------------------------------------

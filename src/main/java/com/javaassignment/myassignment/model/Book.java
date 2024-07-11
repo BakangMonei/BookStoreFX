@@ -3,12 +3,13 @@ package com.javaassignment.myassignment.model;
 import java.io.Serializable;
 
 public class Book implements Serializable {
-    private String isbn;
-    private String title;
-    private String author;
-    private String genre;
-    private double price;
-    private int quantity;
+    public String isbn, title, author, genre;
+    public double price;
+    public int quantity;
+
+    public Book(){
+        super();
+    }
 
     public Book(String isbn, String title, String author, String genre, double price, int quantity) {
         this.isbn = isbn;
@@ -20,7 +21,6 @@ public class Book implements Serializable {
     }
 
     // Getters and Setters
-
     public String getIsbn() {
         return isbn;
     }
@@ -71,7 +71,6 @@ public class Book implements Serializable {
 
     @Override
     public String toString() {
-        return isbn + "," + title + "," + author + "," + genre + "," + price + "," + quantity;
+        return isbn + ',' + title + ',' + author + ',' + genre + ',' + price + ',' + quantity;
     }
-
 }

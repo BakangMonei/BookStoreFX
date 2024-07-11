@@ -7,6 +7,8 @@ module com.javaassignment.myassignment {
     requires org.kordamp.bootstrapfx.core;
 
     opens com.javaassignment.myassignment to javafx.fxml;
+    opens com.javaassignment.myassignment.model to javafx.fxml;
     opens com.javaassignment.myassignment.controller to javafx.fxml;
     exports com.javaassignment.myassignment;
+    exports com.javaassignment.myassignment.model;
 }

@@ -1,2 +1,6 @@
-ISBN1,Programming With Java,Tebatso Nage,Computer Science,300.0,15
-ISBN2,Programming With TypeScript,Kentsenao Baseki,Computer Science,500.0,7
+ISBN1,Programming With Java,Tebatso Nage,Computer Science,300.0,1500
+ISBN2,Programming With TypeScript,Kentsenao Baseki,Computer Science,500.0,700
+ISBN3,AWS,Sylvester Mokgwe,Cloud Services,300.0,1500
+ISBN4,CCNA1,Karabo Macheng,Networking,500.0,400
+ISBN5,CSIM,Tebatso Nage,Hardware Components,300.0,450
+ISBN6,Mobile Development,Freedmore Sidume,Computer Science,800.0,200

@@ -1,17 +1,13 @@
 package com.javaassignment.myassignment.util;
 
-import com.javaassignment.myassignment.model.Book;
-import com.javaassignment.myassignment.model.Customer;
-import com.javaassignment.myassignment.model.Sale;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import com.javaassignment.myassignment.model.*;
+import javafx.collections.*;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.time.*;
+import java.util.*;
 
 public class FileUtil {
     public static final String BOOKS_FILE = "data/books.txt";
@@ -173,5 +169,20 @@ public class FileUtil {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static List<SaleCustomer> readSalesCustomers() {
+        List<SaleCustomer> saleCustomers = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(SALES_CUSTOMERS_FILE))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(",");
+                SaleCustomer saleCustomer = new SaleCustomer(parts[0], parts[1], Integer.parseInt(parts[2]), Double.parseDouble(parts[3]), LocalDateTime.parse(parts[4]), parts[5], parts[6], parts[7], parts[8], parts[9]);
+                saleCustomers.add(saleCustomer);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return saleCustomers;
     }
 }

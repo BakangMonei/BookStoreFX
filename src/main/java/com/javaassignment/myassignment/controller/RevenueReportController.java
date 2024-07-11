@@ -1,9 +1,9 @@
 package com.javaassignment.myassignment.controller;
 
-import com.javaassignment.myassignment.model.Sale;
-import com.javaassignment.myassignment.util.FileUtil;
-import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import com.javaassignment.myassignment.model.*;
+import com.javaassignment.myassignment.util.*;
+import javafx.fxml.*;
+import javafx.scene.control.*;
 
 public class RevenueReportController {
     @FXML

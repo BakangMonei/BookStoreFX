@@ -1,11 +1,10 @@
 package com.javaassignment.myassignment;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
-import java.net.URL;
+import javafx.application.*;
+import javafx.fxml.*;
+import javafx.scene.*;
+import javafx.stage.*;
+import java.net.*;
 
 public class Main extends Application {
     @Override

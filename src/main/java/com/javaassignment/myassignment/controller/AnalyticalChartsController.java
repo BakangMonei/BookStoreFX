@@ -1,16 +1,10 @@
 package com.javaassignment.myassignment.controller;
 
-import javafx.fxml.FXML;
-import javafx.scene.chart.BarChart;
-import javafx.scene.chart.CategoryAxis;
-import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.XYChart;
+import javafx.fxml.*;
+import javafx.scene.chart.*;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
+import java.io.*;
+import java.util.*;
 
 public class AnalyticalChartsController {
 
@@ -20,10 +14,8 @@ public class AnalyticalChartsController {
 
     @FXML
     private BarChart<String, Number> salesBarChart;
-
     @FXML
     private CategoryAxis xAxis;
-
     @FXML
     private NumberAxis yAxis;
 

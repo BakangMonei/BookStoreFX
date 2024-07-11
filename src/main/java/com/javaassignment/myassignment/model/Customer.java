@@ -1,16 +1,15 @@
 package com.javaassignment.myassignment.model;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
 public class Customer implements Serializable {
-    private String id;
-    private String name;
-    private String address;
-    private String phone;
-    private String email;
+    private String id, name, address, phone, email;
     private List<Sale> purchaseHistory;
+
+    public Customer(){
+        super();
+    }
 
     public Customer(String id, String name, String address, String phone, String email) {
         this.id = id;
@@ -24,8 +23,6 @@ public class Customer implements Serializable {
     public void addPurchase(Sale sale) {
         purchaseHistory.add(sale);
     }
-
-    // Getters and Setters
     public String getId() {
         return id;
     }

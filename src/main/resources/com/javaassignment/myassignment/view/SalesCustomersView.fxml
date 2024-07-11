@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaassignment.myassignment.controller.SalesCustomersController">
+    <center>
+        <TableView fx:id="salesCustomersTable" prefWidth="600.0" prefHeight="400.0">
+            <columns>
+                <TableColumn fx:id="saleIdColumn" text="Sale ID" />
+                <TableColumn fx:id="bookIsbnColumn" text="Book ISBN" />
+                <TableColumn fx:id="quantityColumn" text="Quantity" />
+                <TableColumn fx:id="totalAmountColumn" text="Total Amount" />
+                <TableColumn fx:id="saleDateColumn" text="Sale Date" />
+                <TableColumn fx:id="customerIdColumn" text="Customer ID" />
+                <TableColumn fx:id="customerNameColumn" text="Customer Name" />
+                <TableColumn fx:id="customerAddressColumn" text="Customer Address" />
+                <TableColumn fx:id="customerPhoneColumn" text="Customer Phone" />
+                <TableColumn fx:id="customerEmailColumn" text="Customer Email" />
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

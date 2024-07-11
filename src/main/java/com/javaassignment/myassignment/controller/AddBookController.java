@@ -1,25 +1,15 @@
 package com.javaassignment.myassignment.controller;
 
-import com.javaassignment.myassignment.model.Book;
-import com.javaassignment.myassignment.util.FileUtil;
-import javafx.fxml.FXML;
+import com.javaassignment.myassignment.model.*;
+import com.javaassignment.myassignment.util.*;
+import javafx.fxml.*;
 import javafx.scene.control.TextField;
 
-import java.util.List;
+import java.util.*;
 
 public class AddBookController {
     @FXML
-    private TextField txtISBN;
-    @FXML
-    private TextField txtTitle;
-    @FXML
-    private TextField txtAuthor;
-    @FXML
-    private TextField txtGenre;
-    @FXML
-    private TextField txtPrice;
-    @FXML
-    private TextField txtQuantity;
+    private TextField txtISBN, txtTitle, txtAuthor, txtGenre, txtPrice, txtQuantity;
 
     @FXML
     private void addBook() {
@@ -35,7 +25,6 @@ public class AddBookController {
         books.add(book);
         FileUtil.writeBooks(books);
 
-        // Clear the text fields
         txtISBN.clear();
         txtTitle.clear();
         txtAuthor.clear();

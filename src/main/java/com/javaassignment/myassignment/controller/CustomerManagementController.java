@@ -1,23 +1,15 @@
 package com.javaassignment.myassignment.controller;
 
-import com.javaassignment.myassignment.model.Customer;
-import com.javaassignment.myassignment.util.FileUtil;
-import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
+import com.javaassignment.myassignment.model.*;
+import com.javaassignment.myassignment.util.*;
+import javafx.fxml.*;
+import javafx.scene.control.*;
 
 import java.util.List;
 
 public class CustomerManagementController {
     @FXML
-    private TextField txtCustomerId;
-    @FXML
-    private TextField txtCustomerName;
-    @FXML
-    private TextField txtAddress;
-    @FXML
-    private TextField txtPhone;
-    @FXML
-    private TextField txtEmail;
+    private TextField txtCustomerId, txtCustomerName, txtAddress, txtPhone, txtEmail;
 
     @FXML
     private void addCustomer() {
@@ -31,7 +23,6 @@ public class CustomerManagementController {
         customers.add(customer);
         FileUtil.writeCustomers(customers);
 
-        // Clear the text fields
         txtCustomerId.clear();
         txtCustomerName.clear();
         txtAddress.clear();

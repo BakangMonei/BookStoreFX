@@ -1,13 +1,11 @@
 package com.javaassignment.myassignment.controller;
 
-import com.javaassignment.myassignment.model.Customer;
-import com.javaassignment.myassignment.util.FileUtil;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
+import com.javaassignment.myassignment.model.*;
+import com.javaassignment.myassignment.util.*;
+import javafx.collections.*;
+import javafx.fxml.*;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.*;
 
 import java.util.List;
 

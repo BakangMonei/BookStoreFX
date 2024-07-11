@@ -1,17 +1,12 @@
 package com.javaassignment.myassignment.controller;
 
-import com.javaassignment.myassignment.model.Book;
-import com.javaassignment.myassignment.model.Sale;
-import com.javaassignment.myassignment.util.FileUtil;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.scene.control.ListView;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+import com.javaassignment.myassignment.model.*;
+import com.javaassignment.myassignment.util.*;
+import javafx.collections.*;
+import javafx.fxml.*;
+import javafx.scene.control.*;
+import java.util.*;
+import java.util.stream.*;
 
 public class TopSellingBooksController {
     @FXML

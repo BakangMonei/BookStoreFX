@@ -1,14 +1,17 @@
 package com.javaassignment.myassignment.model;
 
-import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.io.*;
+import java.time.*;
 
 public class Sale implements Serializable {
-    private String saleId;
-    private String bookIsbn;
+    private String saleId, bookIsbn;
     private int quantity;
     private double totalAmount;
     private LocalDateTime saleDate;
+
+    public Sale(){
+        super();
+    }
 
     public Sale(String saleId, String bookIsbn, int quantity, double totalAmount) {
         this.saleId = saleId;
@@ -17,9 +20,6 @@ public class Sale implements Serializable {
         this.totalAmount = totalAmount;
         this.saleDate = LocalDateTime.now();
     }
-
-    // Getters and Setters
-
 
     public String getSaleId() {
         return saleId;

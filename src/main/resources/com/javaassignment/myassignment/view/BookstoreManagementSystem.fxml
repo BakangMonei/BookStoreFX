@@ -17,6 +17,7 @@
             <Menu text="Customers">
                 <MenuItem text="Customer Management" fx:id="btnCustomerManagement" />
                 <MenuItem text="View All Customers" fx:id="btnViewCustomers" />
+                <MenuItem text="View Customer Sales" fx:id="btnViewCustomersSales" />
             </Menu>
             <Menu text="Reports">
                 <MenuItem text="Revenue Report" fx:id="btnRevenueReport" />

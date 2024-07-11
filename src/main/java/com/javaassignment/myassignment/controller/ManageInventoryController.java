@@ -1,10 +1,9 @@
 package com.javaassignment.myassignment.controller;
 
-import com.javaassignment.myassignment.model.Book;
-import com.javaassignment.myassignment.util.FileUtil;
-import javafx.fxml.FXML;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import com.javaassignment.myassignment.model.*;
+import com.javaassignment.myassignment.util.*;
+import javafx.fxml.*;
+import javafx.scene.control.*;
 
 public class ManageInventoryController {
     @FXML

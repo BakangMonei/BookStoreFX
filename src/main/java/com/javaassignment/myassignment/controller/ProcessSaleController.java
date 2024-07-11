@@ -1,39 +1,18 @@
 package com.javaassignment.myassignment.controller;
 
-import com.javaassignment.myassignment.model.Book;
-import com.javaassignment.myassignment.model.Customer;
-import com.javaassignment.myassignment.model.Sale;
-import com.javaassignment.myassignment.util.FileUtil;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
-
-import java.util.List;
-import java.util.UUID;
+import com.javaassignment.myassignment.model.*;
+import com.javaassignment.myassignment.util.*;
+import javafx.collections.*;
+import javafx.fxml.*;
+import javafx.scene.control.*;
+import java.util.*;
 
 public class ProcessSaleController {
     @FXML
     private ComboBox<String> cbISBN;
     @FXML
-    private TextField txtTitle;
-    @FXML
-    private TextField txtAuthor;
-    @FXML
-    private TextField txtPrice;
-    @FXML
-    private TextField txtQuantity;
-    @FXML
-    private TextField txtCustomerId;
-    @FXML
-    private TextField txtCustomerName;
-    @FXML
-    private TextField txtCustomerAddress;
-    @FXML
-    private TextField txtCustomerPhone;
-    @FXML
-    private TextField txtCustomerEmail;
+    private TextField txtTitle, txtAuthor, txtPrice, txtQuantity,
+            txtCustomerId, txtCustomerName, txtCustomerAddress, txtCustomerPhone, txtCustomerEmail;
 
     @FXML
     private void initialize() {
@@ -45,7 +24,6 @@ public class ProcessSaleController {
         }
 
         cbISBN.setItems(bookIsbns);
-
         cbISBN.setOnAction(event -> {
             String selectedISBN = cbISBN.getSelectionModel().getSelectedItem();
             for (Book book : books) {
@@ -65,7 +43,6 @@ public class ProcessSaleController {
         try {
             quantity = Integer.parseInt(txtQuantity.getText());
         } catch (NumberFormatException e) {
-            // Handle invalid quantity input
             System.out.println("Invalid quantity input");
             return;
         }
@@ -95,11 +72,9 @@ public class ProcessSaleController {
                 FileUtil.writeSalesCustomers(sales, customers);
                 break;
             } else if (book.getIsbn().equals(isbn) && book.getQuantity() < quantity) {
-                // Handle insufficient quantity
                 System.out.println("Insufficient quantity");
             }
         }
-        // Clear the text fields
         cbISBN.setValue(null);
         txtTitle.clear();
         txtAuthor.clear();

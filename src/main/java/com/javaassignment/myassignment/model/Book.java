@@ -1,6 +1,6 @@
 package com.javaassignment.myassignment.model;
 
-import java.io.Serializable;
+import java.io.*;
 
 public class Book implements Serializable {
     public String isbn, title, author, genre;
@@ -20,7 +20,6 @@ public class Book implements Serializable {
         this.quantity = quantity;
     }
 
-    // Getters and Setters
     public String getIsbn() {
         return isbn;
     }

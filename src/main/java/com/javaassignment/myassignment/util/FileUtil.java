@@ -17,13 +17,14 @@ public class FileUtil {
     public static final String BOOKS_FILE = "data/books.txt";
     public static final String CUSTOMERS_FILE = "data/customers.txt";
     public static final String SALES_FILE = "data/sales.txt";
+    private static final String SALES_CUSTOMERS_FILE = "data/SalesCustomers.txt";
 
     // -----------------------------------------------------------------------------------------------------------------
     public static List<Book> readBooks() {
         List<Book> books = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(BOOKS_FILE))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(BOOKS_FILE))) {
             String line;
-            while ((line = reader.readLine()) != null) {
+            while ((line = br.readLine()) != null) {
                 String[] parts = line.split(",");
                 books.add(new Book(parts[0], parts[1], parts[2], parts[3], Double.parseDouble(parts[4]), Integer.parseInt(parts[5])));
             }
@@ -156,4 +157,21 @@ public class FileUtil {
         }
     }
     // -----------------------------------------------------------------------------------------------------------------
+
+    public static void writeSalesCustomers(List<Sale> sales, List<Customer> customers) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(SALES_CUSTOMERS_FILE))) {
+            for (Sale sale : sales) {
+                for (Customer customer : customers) {
+                    for (Sale customerSale : customer.getPurchaseHistory()) {
+                        if (customerSale.getSaleId().equals(sale.getSaleId())) {
+                            bw.write(sale.toString() + "," + customer.toString());
+                            bw.newLine();
+                        }
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

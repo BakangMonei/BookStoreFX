@@ -1,2 +1,4 @@
 123,Precious Amo,Botswana Accountancy College,26771234567,preciousamo@mail.com
 1274,Cassey Amogelang,Tlokweng,1234567,cassey@gmail.com
+2763,Junior Precious,Gaborone,12346,myEmail@mail.com
+9876,Pumpy,Tlokweng,98765431,pumpy@mail.com

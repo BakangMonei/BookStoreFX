@@ -26,8 +26,6 @@ public class Customer implements Serializable {
     }
 
     // Getters and Setters
-
-
     public String getId() {
         return id;
     }
